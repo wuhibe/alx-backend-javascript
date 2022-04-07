@@ -1,9 +1,11 @@
+import Currency from './3-currency';
+
 const assert = require('assert');
 
 export default class Pricing {
   constructor(amount, currency) {
     assert(typeof (amount) === 'number', TypeError('Amount must be a number'));
-    assert(typeof (currency) === 'object', TypeError('Currency must be an object'));
+    assert(currency instanceof Currency, TypeError('Currency must be of type Currency'));
     this._amount = amount;
     this._currency = currency;
   }
@@ -17,7 +19,7 @@ export default class Pricing {
   }
 
   set currency(currency) {
-    assert(typeof (currency) === 'object', TypeError('Currency must be an object'));
+    assert(currency instanceof Currency, TypeError('Currency must be of type Currency'));
     this._currency = currency;
   }
 
