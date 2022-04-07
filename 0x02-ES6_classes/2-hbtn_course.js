@@ -4,12 +4,12 @@ export default class HolbertonCourse {
   constructor(name, length, students) {
     assert(typeof (name) === 'string', TypeError('Name must be a string'));
     assert(typeof (length) === 'number', TypeError('Length must be a number'));
+    assert(typeof (students) === 'object', TypeError('Students must be an object'));
     this._name = name;
     this._length = length;
     this._students = students;
   }
 
-  // name
   get name() {
     return this._name;
   }
@@ -19,7 +19,6 @@ export default class HolbertonCourse {
     this._name = name;
   }
 
-  // length
   get length() {
     return this._length;
   }
@@ -29,12 +28,13 @@ export default class HolbertonCourse {
     this._length = length;
   }
 
-  // students
   get students() {
+    assert(typeof (students) === 'object', TypeError('Students must be an object'));
     return this._students;
   }
 
   set students(students) {
+    assert(typeof (students) === 'object', TypeError('Students must be an object'));
     this._students = students;
   }
 }
