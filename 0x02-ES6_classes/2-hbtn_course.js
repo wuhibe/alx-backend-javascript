@@ -29,7 +29,6 @@ export default class HolbertonCourse {
   }
 
   get students() {
-    assert(typeof (students) === 'object', TypeError('Students must be an object'));
     return this._students;
   }
 
