@@ -5,17 +5,17 @@ console.log(b);
 
 class TestBuilding extends Building {}
 class NewBuilding extends Building {
-    evacuationWarningMessage() {
-        console.log('Abracadabra');
-    }
+  evacuationWarningMessage() {
+    console.log('Abracadabra');
+  }
 }
 try {
-    new NewBuilding(123)
+  new NewBuilding(123);
 } catch (err) {
-    console.log(err);
+  console.log(err);
 }
 try {
-    new TestBuilding(200)
+  new TestBuilding(200);
 } catch (err) {
-    console.log(err);
+  console.log(err);
 }
