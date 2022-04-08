@@ -1,6 +1,12 @@
 export default function iterateThroughObject(reportWithIterator) {
-  const newstr = '';
-  for (const abc of reportWithIterator) {
-    newstr.concat(`${abc} | `);
+  let st = '';
+  for (const idx of reportWithIterator) {
+    if (idx === reportWithIterator[0]) {
+      st = idx;
+      // eslint-disable-next-line
+            continue;
+    }
+    st = `${st} | ${idx}`;
   }
+  return st;
 }
